@@ -16,11 +16,11 @@ def check_exists_by_xpath(xpath):
 url1 = r'https://www.mas.gov.sg/investor-alert-list'
 
 options = Options()
-prefs = {"credentials_enable_service": False, "profile.password_manager_enabled": False}
-options.add_experimental_option("prefs", prefs)
-options.add_experimental_option("useAutomationExtension", False)
-options.add_experimental_option("excludeSwitches",["enable-automation"])
-options.add_experimental_option("detach",True)
+# prefs = {"credentials_enable_service": False, "profile.password_manager_enabled": False}
+# options.add_experimental_option("prefs", prefs)
+# options.add_experimental_option("useAutomationExtension", False)
+# options.add_experimental_option("excludeSwitches",["enable-automation"])
+# options.add_experimental_option("detach",True)
 options.add_argument("headless")
 
 

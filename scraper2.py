@@ -11,15 +11,17 @@ url2 = r'https://www.afdb.org/en/projects-operations/debarment-and-sanctions-pro
 path = "//*[@id=\"datatable-1\"]"
 
 options = Options()
-prefs = {"credentials_enable_service": False, "profile.password_manager_enabled": False}
-options.add_experimental_option("prefs", prefs)
-options.add_experimental_option("useAutomationExtension", False)
-options.add_experimental_option("excludeSwitches",["enable-automation"])
-options.add_experimental_option("detach",True)
+# prefs = {"credentials_enable_service": False, "profile.password_manager_enabled": False}
+# options.add_experimental_option("prefs", prefs)
+# options.add_experimental_option("useAutomationExtension", False)
+# options.add_experimental_option("excludeSwitches",["enable-automation"])
+# options.add_experimental_option("detach",True)
 options.add_argument("headless")
 
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)    
 driver.get(url2)
+
+
 
 print(driver.find_element(By.XPATH, path).text)
